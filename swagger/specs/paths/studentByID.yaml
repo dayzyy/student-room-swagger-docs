@@ -1,0 +1,20 @@
+get:
+  summary: Get student by id
+  parameters:
+    - $ref: '../components/parameters/studentID.yaml'
+  responses:
+    '200':
+      description: Successfully retrieved student with given id
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/student/student.yaml'
+    '400':
+      description: Failed to retrieve student with given id 
+      content:
+        application/json:
+          examples:
+            studentNotFound:
+              summary: Invalid student id
+              value:
+                detail: "Student with given id not found!"

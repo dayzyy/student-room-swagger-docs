@@ -5,25 +5,5 @@ info:
   version: 1.0.0
 
 paths:
-  /students/:
-    get:
-      summary: Get all students
-      responses:
-        '200':
-          description: Successfuly retrieved all students
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  required:
-                    - id
-                    - name
-                  properties:
-                    id:
-                      type: integer
-                      example: 0
-                    name:
-                      type: string
-                      example: "Luka Mania"
+  /students/{id}:
+    $ref: './paths/studentByID.yaml'
