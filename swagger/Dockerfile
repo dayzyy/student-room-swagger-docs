@@ -1,5 +1,5 @@
 # Base image that sets up Swagger UI to serve the API documentation
-FROM swagger/swagger-ui
+FROM swaggerapi/swagger-ui
 
 WORKDIR /usr/local/app/specs/
 
