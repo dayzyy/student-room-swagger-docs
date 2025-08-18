@@ -1,0 +1,25 @@
+type: object
+required:
+  - id
+  - name
+  - birthday
+  - sex
+  - room_id
+properties:
+  id:
+    type: integer
+    example: 0
+  name:
+    type: string
+    example: "Luka Mania"
+  birthday:
+    type: string
+    format: date-time
+    example: "2005-07-19T00:00:00.000000"
+  sex:
+    type: string
+    enum: ["M", "F"]
+    example: "M"
+  room_id:
+    type: integer
+    example: 111
