@@ -1,10 +1,6 @@
 # Base image that sets up Swagger UI to serve the API documentation
-FROM swaggerapi/swagger-ui
+FROM swaggerapi/swagger-ui:latest
 
-WORKDIR /usr/local/app/specs/
-
-COPY . .
-
-ENV SWAGGER_JSON=/usr/local/app/specs/openapi.yaml
+ENV SWAGGER_JSON=/specs/openapi.yaml
 
 EXPOSE 8080

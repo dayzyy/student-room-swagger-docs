@@ -4,6 +4,6 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SWAGGER_JSON: /usr/local/app/specs/openapi.yaml
+      SWAGGER_JSON: /specs/openapi.yaml
     volumes:
-      - ./swagger/specs:/usr/local/app/specs
+      - ./swagger/specs:/specs
