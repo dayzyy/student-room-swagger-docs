@@ -23,6 +23,13 @@ delete:
   responses:
     '204':
       description: Successfully deleted student with given id
+    '400':
+      description: Failed to delete student with given id 
+      content:
+        application/json:
+          examples:
+            studentNotFound:
+              $ref: '../components/examples/student/studentNotFound.yaml'
 
 put:
   summary: Update student by id
