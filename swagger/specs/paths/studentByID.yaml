@@ -40,7 +40,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: '../components/schemas/student/model.yaml'
+          $ref: '../components/schemas/student/put.yaml'
   responses:
     '200':
       description: Successfully updated student with given id
