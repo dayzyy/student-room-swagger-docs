@@ -15,9 +15,7 @@ get:
         application/json:
           examples:
             studentNotFound:
-              summary: Invalid student id
-              value:
-                detail: "Student with given id not found!"
+              $ref: '../components/examples/student/studentNotFound.yaml'
 delete:
   summary: Delete student by id
   parameters:
@@ -43,6 +41,4 @@ put:
         application/json:
           examples:
             studentNotFound:
-              summary: Invalid student id
-              value:
-                detail: "Student with given id not found!"
+              $ref: '../components/examples/student/studentNotFound.yaml'
