@@ -1,0 +1,3 @@
+summary: Invalid room id
+value:
+  detail: "Room with given id not found!"

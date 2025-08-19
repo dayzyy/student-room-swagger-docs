@@ -1,0 +1,57 @@
+get:
+  summary: Get room by id
+  parameters:
+    - $ref: '../../components/parameters/room/id.yaml'
+  responses:
+    '200':
+      description: Successfully retrieved room with given id
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/room/model.yaml'
+    '400':
+      description: Failed to retrieve room with given id 
+      content:
+        application/json:
+          examples:
+            roomNotFound:
+              $ref: '../../components/examples/room/response/notFound.yaml'
+delete:
+  summary: Delete room by id
+  parameters:
+    - $ref: '../../components/parameters/room/id.yaml'
+  responses:
+    '204':
+      description: Successfully deleted room with given id
+    '400':
+      description: Failed to delete room with given id 
+      content:
+        application/json:
+          examples:
+            roomNotFound:
+              $ref: '../../components/examples/room/response/notFound.yaml'
+put:
+  summary: Update room by id
+  parameters:
+    - $ref: '../../components/parameters/room/id.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/room/put.yaml'
+        examples:
+          changeName:
+            $ref: '../../components/examples/room/request/put/changeName.yaml'
+  responses:
+    '200':
+      description: Successfully updated room with given id
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/room/model.yaml'
+          examples:
+            changeName:
+              $ref: '../../components/examples/room/response/put/changeName.yaml'
+    '400':
+      $ref: '../../components/responses/room/failedToUpdate.yaml'

@@ -1,0 +1,3 @@
+summary: Invalid room data
+value:
+  detail: "Room can not be updated with given data!"

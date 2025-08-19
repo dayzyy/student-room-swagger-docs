@@ -1,0 +1,8 @@
+description: Failed to update room with given id
+content:
+  application/json:
+    examples:
+      roomNotFound:
+        $ref: '../../examples/room/response/notFound.yaml'
+      roomInvalidDataProvided:
+        $ref: '../../examples/room/response/invalidDataProvided.yaml'
