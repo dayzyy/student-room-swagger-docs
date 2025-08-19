@@ -1,6 +1,8 @@
 description: Failed to update student with given id
 content:
   application/json:
+    schema:
+      $ref '../../schemas/error/error.yaml'
     examples:
       studentNotFound:
         $ref: '../../examples/student/response/notFound.yaml'

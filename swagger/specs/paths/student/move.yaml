@@ -19,6 +19,8 @@ post:
       description: Failed to move student with given id to the room with given id
       content:
         application/json:
+          schema:
+            $ref: '../../components/schemas/error/error.yaml'
           examples:
             studentNotFound:
               $ref: '../../components/examples/student/response/notFound.yaml'

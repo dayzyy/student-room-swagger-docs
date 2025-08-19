@@ -15,6 +15,8 @@ get:
       description: Failed to retrieve room with given id 
       content:
         application/json:
+          schema:
+            $ref '../../components/schemas/error/error.yaml'
           examples:
             roomNotFound:
               $ref: '../../components/examples/room/response/notFound.yaml'
@@ -31,6 +33,8 @@ delete:
       description: Failed to delete room with given id 
       content:
         application/json:
+          schema:
+            $ref '../../components/schemas/error/error.yaml'
           examples:
             roomNotFound:
               $ref: '../../components/examples/room/response/notFound.yaml'
