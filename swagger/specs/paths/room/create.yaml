@@ -1,0 +1,26 @@
+post:
+  tags:
+  - Room CRUD
+  summary: Create new room
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/room/add.yaml'
+  responses:
+    '200':
+      description: Successfuly created new room with given data
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/room/model.yaml'
+    '400':
+      description: Failed to create new room with given data
+      content:
+        application/json:
+          examples:
+            invalidDataProvided:
+              summary: Invalid data for room creation
+              value:
+                detail: "Invalid data for room creation"

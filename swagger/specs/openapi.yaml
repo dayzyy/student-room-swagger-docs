@@ -19,3 +19,6 @@ paths:
 
   /rooms/{id}:
     $ref: './paths/room/byID.yaml'
+
+  /rooms/add:
+    $ref: './paths/room/create.yaml'
