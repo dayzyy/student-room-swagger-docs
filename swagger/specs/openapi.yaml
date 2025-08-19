@@ -5,10 +5,10 @@ info:
   version: 1.0.0
 
 tags:
-  - name: Student CRUD
-    description: CRUD operations for students
-  - name: Room CRUD
-    description: CRUD operations for rooms
+  - name: Students
+    description: operations for students
+  - name: Rooms
+    description: operations for rooms
 
 paths:
   /students/{id}:

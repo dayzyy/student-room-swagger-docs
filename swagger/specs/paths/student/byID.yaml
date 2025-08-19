@@ -1,6 +1,6 @@
 get:
   tags:
-    - Student CRUD
+    - Students
   summary: Get student by id
   parameters:
     - $ref: '../../components/parameters/student/id.yaml'
@@ -16,13 +16,13 @@ get:
       content:
         application/json:
           schema:
-            $ref '../../components/schemas/error/error.yaml'
+            $ref: '../../components/schemas/error/error.yaml'
           examples:
             studentNotFound:
               $ref: '../../components/examples/student/response/notFound.yaml'
 delete:
   tags:
-    - Student CRUD
+    - Students
   summary: Delete student by id
   parameters:
     - $ref: '../../components/parameters/student/id.yaml'
@@ -34,13 +34,13 @@ delete:
       content:
         application/json:
           schema:
-            $ref '../../components/schemas/error/error.yaml'
+            $ref: '../../components/schemas/error/error.yaml'
           examples:
             studentNotFound:
               $ref: '../../components/examples/student/response/notFound.yaml'
 put:
   tags:
-    - Student CRUD
+    - Students
   summary: Update student by id
   parameters:
     - $ref: '../../components/parameters/student/id.yaml'
@@ -79,7 +79,7 @@ put:
       $ref: '../../components/responses/student/failedToUpdate.yaml'
 patch:
   tags:
-    - Student CRUD
+    - Students
   summary: Partially update student by id
   parameters:
     - $ref: '../../components/parameters/student/id.yaml'

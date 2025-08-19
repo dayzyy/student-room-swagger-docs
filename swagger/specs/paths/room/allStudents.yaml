@@ -1,4 +1,6 @@
 get:
+  tags:
+    - Rooms
   summary: Get all students in the room with given id
   parameters:
     - $ref: '../../components/parameters/room/id.yaml'

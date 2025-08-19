@@ -1,4 +1,6 @@
 post:
+  tags:
+    - Students
   summary: Move student with given id to the room with given id
   parameters:
     - $ref: '../../components/parameters/student/id.yaml'

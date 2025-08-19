@@ -2,7 +2,7 @@ description: Failed to update room with given id
 content:
   application/json:
     schema:
-      $ref '../../schemas/error/error.yaml'
+      $ref: '../../schemas/error/error.yaml'
     examples:
       roomNotFound:
         $ref: '../../examples/room/response/notFound.yaml'

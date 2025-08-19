@@ -1,6 +1,6 @@
 post:
   tags:
-  - Student CRUD
+  - Students
   summary: Create new student
   requestBody:
     required: true

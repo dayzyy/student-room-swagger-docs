@@ -1,6 +1,6 @@
 get:
   tags:
-    - Room CRUD
+    - Rooms
   summary: Get room by id
   parameters:
     - $ref: '../../components/parameters/room/id.yaml'
@@ -16,13 +16,13 @@ get:
       content:
         application/json:
           schema:
-            $ref '../../components/schemas/error/error.yaml'
+            $ref: '../../components/schemas/error/error.yaml'
           examples:
             roomNotFound:
               $ref: '../../components/examples/room/response/notFound.yaml'
 delete:
   tags:
-    - Room CRUD
+    - Rooms
   summary: Delete room by id
   parameters:
     - $ref: '../../components/parameters/room/id.yaml'
@@ -34,13 +34,13 @@ delete:
       content:
         application/json:
           schema:
-            $ref '../../components/schemas/error/error.yaml'
+            $ref: '../../components/schemas/error/error.yaml'
           examples:
             roomNotFound:
               $ref: '../../components/examples/room/response/notFound.yaml'
 put:
   tags:
-    - Room CRUD
+    - Rooms
   summary: Update room by id
   parameters:
     - $ref: '../../components/parameters/room/id.yaml'
