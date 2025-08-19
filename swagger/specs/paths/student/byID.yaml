@@ -58,13 +58,13 @@ put:
             $ref: '../../components/schemas/student/model.yaml'
           examples:
             changeName:
-              $ref: '../../components/examples/student/request/put/changeName.yaml'
+              $ref: '../../components/examples/student/response/changeName.yaml'
             changeRoom:
-              $ref: '../../components/examples/student/request/put/changeRoom.yaml'
+              $ref: '../../components/examples/student/response/changeRoom.yaml'
             changeBday:
-              $ref: '../../components/examples/student/request/put/changeBday.yaml'
+              $ref: '../../components/examples/student/response/changeBday.yaml'
             changeSex:
-              $ref: '../../components/examples/student/request/put/changeSex.yaml'
+              $ref: '../../components/examples/student/response/changeSex.yaml'
     '400':
       $ref: '../../components/responses/student/failedToUpdate.yaml'
 patch:
@@ -93,10 +93,10 @@ patch:
             $ref: '../../components/schemas/student/model.yaml'
           examples:
             changeName:
-              $ref: '../../components/examples/student/request/put/changeName.yaml'
+              $ref: '../../components/examples/student/response/changeName.yaml'
             changeBday:
-              $ref: '../../components/examples/student/request/put/changeBday.yaml'
+              $ref: '../../components/examples/student/response/changeBday.yaml'
             changeSex:
-              $ref: '../../components/examples/student/request/put/changeSex.yaml'
+              $ref: '../../components/examples/student/response/changeSex.yaml'
     '400':
       $ref: '../../components/responses/student/failedToUpdate.yaml'
