@@ -42,13 +42,13 @@ put:
           $ref: '../components/schemas/student/put.yaml'
         examples:
           changeName:
-            $ref: '../components/examples/student/request/changeName.yaml'
+            $ref: '../components/examples/student/request/put/changeName.yaml'
           changeRoom:
-            $ref: '../components/examples/student/request/changeRoom.yaml'
+            $ref: '../components/examples/student/request/put/changeRoom.yaml'
           changeBday:
-            $ref: '../components/examples/student/request/changeBday.yaml'
+            $ref: '../components/examples/student/request/put/changeBday.yaml'
           changeSex:
-            $ref: '../components/examples/student/request/changeSex.yaml'
+            $ref: '../components/examples/student/request/put/changeSex.yaml'
   responses:
     '200':
       description: Successfully updated student with given id
@@ -58,13 +58,13 @@ put:
             $ref: '../components/schemas/student/model.yaml'
           examples:
             changeName:
-              $ref: '../components/examples/student/request/changeName.yaml'
+              $ref: '../components/examples/student/request/put/changeName.yaml'
             changeRoom:
-              $ref: '../components/examples/student/request/changeRoom.yaml'
+              $ref: '../components/examples/student/request/put/changeRoom.yaml'
             changeBday:
-              $ref: '../components/examples/student/request/changeBday.yaml'
+              $ref: '../components/examples/student/request/put/changeBday.yaml'
             changeSex:
-              $ref: '../components/examples/student/request/changeSex.yaml'
+              $ref: '../components/examples/student/request/put/changeSex.yaml'
     '400':
       $ref: '../components/responses/student/failedToUpdate.yaml'
 patch:
@@ -77,6 +77,13 @@ patch:
       application/json:
         schema:
           $ref: '../components/schemas/student/patch.yaml'
+        examples:
+          changeName:
+            $ref: '../components/examples/student/request/patch/changeName.yaml'
+          changeBday:
+            $ref: '../components/examples/student/request/patch/changeBday.yaml'
+          changeSex:
+            $ref: '../components/examples/student/request/patch/changeSex.yaml'
   responses:
     '200':
       description: Successfully updated student with given id
@@ -84,5 +91,12 @@ patch:
         application/json:
           schema:
             $ref: '../components/schemas/student/model.yaml'
+          examples:
+            changeName:
+              $ref: '../components/examples/student/request/put/changeName.yaml'
+            changeBday:
+              $ref: '../components/examples/student/request/put/changeBday.yaml'
+            changeSex:
+              $ref: '../components/examples/student/request/put/changeSex.yaml'
     '400':
       $ref: '../components/responses/student/failedToUpdate.yaml'
