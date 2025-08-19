@@ -18,3 +18,10 @@ get:
               summary: Invalid student id
               value:
                 detail: "Student with given id not found!"
+delete:
+  summary: Delete student by id
+  parameters:
+    - $ref: '../components/parameters/studentID.yaml'
+  responses:
+    '204':
+      description: Successfully deleted student with given id
