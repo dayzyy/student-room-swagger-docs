@@ -4,6 +4,12 @@ info:
   title: Student/Room API
   version: 1.0.0
 
+tags:
+  - name: Student CRUD
+    description: CRUD operations for students
+  - name: Room CRUD
+    description: CRUD operations for rooms
+
 paths:
   /students/{id}:
     $ref: './paths/student/byID.yaml'

@@ -1,4 +1,6 @@
 get:
+  tags:
+    - Student CRUD
   summary: Get student by id
   parameters:
     - $ref: '../../components/parameters/student/id.yaml'
@@ -17,6 +19,8 @@ get:
             studentNotFound:
               $ref: '../../components/examples/student/response/notFound.yaml'
 delete:
+  tags:
+    - Student CRUD
   summary: Delete student by id
   parameters:
     - $ref: '../../components/parameters/student/id.yaml'
@@ -31,6 +35,8 @@ delete:
             studentNotFound:
               $ref: '../../components/examples/student/response/notFound.yaml'
 put:
+  tags:
+    - Student CRUD
   summary: Update student by id
   parameters:
     - $ref: '../../components/parameters/student/id.yaml'
@@ -68,6 +74,8 @@ put:
     '400':
       $ref: '../../components/responses/student/failedToUpdate.yaml'
 patch:
+  tags:
+    - Student CRUD
   summary: Partially update student by id
   parameters:
     - $ref: '../../components/parameters/student/id.yaml'
