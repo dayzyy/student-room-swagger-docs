@@ -14,6 +14,9 @@ paths:
   /students/{id}:
     $ref: './paths/student/byID.yaml'
 
+  /students/{id}/move:
+    $ref: './paths/student/move.yaml'
+
   /students/add:
     $ref: './paths/student/create.yaml'
 

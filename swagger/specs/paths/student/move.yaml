@@ -1,0 +1,26 @@
+post:
+  summary: Move student with given id to the room with given id
+  parameters:
+    - $ref: '../../components/parameters/student/id.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/room/move.yaml'
+  responses:
+    '200':
+      description: Successfully moved student with given id to the room with given id
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/student/model.yaml'
+    '400':
+      description: Failed to move student with given id to the room with given id
+      content:
+        application/json:
+          examples:
+            studentNotFound:
+              $ref: '../../components/examples/student/response/notFound.yaml'
+            roomNotFound:
+              $ref: '../../components/examples/room/response/notFound.yaml'
