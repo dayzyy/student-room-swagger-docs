@@ -1,0 +1,22 @@
+# Schema for the student PATCH endpoint
+# - The request body must not accept the `id` field 
+#   because it is a unique identifier that should never change.
+# - The `room_id` field is also excluded here, since moving students 
+#   to a different room is handled by a separate dedicated endpoint.
+
+type: object
+properties:
+  name:
+    type: string
+    example: "Chloe tism"
+  birthday:
+    type: string
+    format: date-time
+    example: "2005-07-19T00:00:00.000000"
+  sex:
+    type: string
+    enum: ["M", "F"]
+    example: "F"
+  room_id:
+    type: integer
+    example: 111
