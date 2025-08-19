@@ -1,0 +1,102 @@
+get:
+  summary: Get student by id
+  parameters:
+    - $ref: '../../components/parameters/student/id.yaml'
+  responses:
+    '200':
+      description: Successfully retrieved student with given id
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/student/model.yaml'
+    '400':
+      description: Failed to retrieve student with given id 
+      content:
+        application/json:
+          examples:
+            studentNotFound:
+              $ref: '../../components/examples/student/response/notFound.yaml'
+delete:
+  summary: Delete student by id
+  parameters:
+    - $ref: '../../components/parameters/student/id.yaml'
+  responses:
+    '204':
+      description: Successfully deleted student with given id
+    '400':
+      description: Failed to delete student with given id 
+      content:
+        application/json:
+          examples:
+            studentNotFound:
+              $ref: '../../components/examples/student/response/notFound.yaml'
+put:
+  summary: Update student by id
+  parameters:
+    - $ref: '../../components/parameters/student/id.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/student/put.yaml'
+        examples:
+          changeName:
+            $ref: '../../components/examples/student/request/put/changeName.yaml'
+          changeRoom:
+            $ref: '../../components/examples/student/request/put/changeRoom.yaml'
+          changeBday:
+            $ref: '../../components/examples/student/request/put/changeBday.yaml'
+          changeSex:
+            $ref: '../../components/examples/student/request/put/changeSex.yaml'
+  responses:
+    '200':
+      description: Successfully updated student with given id
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/student/model.yaml'
+          examples:
+            changeName:
+              $ref: '../../components/examples/student/request/put/changeName.yaml'
+            changeRoom:
+              $ref: '../../components/examples/student/request/put/changeRoom.yaml'
+            changeBday:
+              $ref: '../../components/examples/student/request/put/changeBday.yaml'
+            changeSex:
+              $ref: '../../components/examples/student/request/put/changeSex.yaml'
+    '400':
+      $ref: '../../components/responses/student/failedToUpdate.yaml'
+patch:
+  summary: Partially update student by id
+  parameters:
+    - $ref: '../../components/parameters/student/id.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/student/patch.yaml'
+        examples:
+          changeName:
+            $ref: '../../components/examples/student/request/patch/changeName.yaml'
+          changeBday:
+            $ref: '../../components/examples/student/request/patch/changeBday.yaml'
+          changeSex:
+            $ref: '../../components/examples/student/request/patch/changeSex.yaml'
+  responses:
+    '200':
+      description: Successfully updated student with given id
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/student/model.yaml'
+          examples:
+            changeName:
+              $ref: '../../components/examples/student/request/put/changeName.yaml'
+            changeBday:
+              $ref: '../../components/examples/student/request/put/changeBday.yaml'
+            changeSex:
+              $ref: '../../components/examples/student/request/put/changeSex.yaml'
+    '400':
+      $ref: '../../components/responses/student/failedToUpdate.yaml'

@@ -6,4 +6,4 @@ info:
 
 paths:
   /students/{id}:
-    $ref: './paths/studentByID.yaml'
+    $ref: './paths/student/byID.yaml'
