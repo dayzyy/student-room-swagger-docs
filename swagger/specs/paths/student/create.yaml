@@ -1,0 +1,26 @@
+post:
+  tags:
+  - Student CRUD
+  summary: Create new student
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../../components/schemas/student/add.yaml'
+  responses:
+    '200':
+      description: Successfuly created new student with given data
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/student/model.yaml'
+    '400':
+      description: Failed to create new student with given data
+      content:
+        application/json:
+          examples:
+            invalidDataProvided:
+              summary: Invalid data for student creation
+              value:
+                detail: "Invalid data for student creation"
