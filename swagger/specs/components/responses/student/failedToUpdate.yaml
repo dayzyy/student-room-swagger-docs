@@ -1,0 +1,8 @@
+description: Failed to update student with given id
+content:
+  application/json:
+    examples:
+      studentNotFound:
+        $ref: '../../examples/student/studentNotFound.yaml'
+      studentInvalidDataProvided:
+        $ref: '../../examples/student/studentInvalidDataProvided.yaml'

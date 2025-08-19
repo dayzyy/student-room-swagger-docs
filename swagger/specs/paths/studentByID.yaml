@@ -42,14 +42,7 @@ put:
           schema:
             $ref: '../components/schemas/student/student.yaml'
     '400':
-      description: Failed to update student with given id
-      content:
-        application/json:
-          examples:
-            studentNotFound:
-              $ref: '../components/examples/student/studentNotFound.yaml'
-            studentInvalidDataProvided:
-              $ref: '../components/examples/student/studentInvalidDataProvided.yaml'
+      $ref: '../components/responses/student/failedToUpdate.yaml'
 patch:
   summary: Partially update student by id
   parameters:
@@ -68,11 +61,4 @@ patch:
           schema:
             $ref: '../components/schemas/student/student.yaml'
     '400':
-      description: Failed to update student with given id
-      content:
-        application/json:
-          examples:
-            studentNotFound:
-              $ref: '../components/examples/student/studentNotFound.yaml'
-            studentInvalidDataProvided:
-              $ref: '../components/examples/student/studentInvalidDataProvided.yaml'
+      $ref: '../components/responses/student/failedToUpdate.yaml'
