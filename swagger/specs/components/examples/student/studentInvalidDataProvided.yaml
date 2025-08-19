@@ -1,0 +1,3 @@
+summary: Invalid student data
+value:
+  detail: "Student can not be updated with given data!"
