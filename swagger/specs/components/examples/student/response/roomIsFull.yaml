@@ -1,0 +1,3 @@
+summary: Room with given id is full
+value:
+  detail: "Can not move the student to the room wiht given id. The room is full!"

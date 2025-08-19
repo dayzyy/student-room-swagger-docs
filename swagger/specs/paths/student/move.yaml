@@ -28,3 +28,5 @@ post:
               $ref: '../../components/examples/student/response/notFound.yaml'
             roomNotFound:
               $ref: '../../components/examples/room/response/notFound.yaml'
+            roomIsFull:
+              $ref: '../../components/examples/student/response/roomIsFull.yaml'
