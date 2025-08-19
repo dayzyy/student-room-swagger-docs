@@ -15,7 +15,7 @@ get:
         application/json:
           examples:
             studentNotFound:
-              $ref: '../components/examples/student/notFound.yaml'
+              $ref: '../components/examples/student/response/notFound.yaml'
 delete:
   summary: Delete student by id
   parameters:
@@ -29,8 +29,7 @@ delete:
         application/json:
           examples:
             studentNotFound:
-              $ref: '../components/examples/student/notFound.yaml'
-
+              $ref: '../components/examples/student/response/notFound.yaml'
 put:
   summary: Update student by id
   parameters:
@@ -41,6 +40,15 @@ put:
       application/json:
         schema:
           $ref: '../components/schemas/student/put.yaml'
+        examples:
+          changeName:
+            $ref: '../components/examples/student/request/changeName.yaml'
+          changeRoom:
+            $ref: '../components/examples/student/request/changeRoom.yaml'
+          changeBday:
+            $ref: '../components/examples/student/request/changeBday.yaml'
+          changeSex:
+            $ref: '../components/examples/student/request/changeSex.yaml'
   responses:
     '200':
       description: Successfully updated student with given id
@@ -48,6 +56,15 @@ put:
         application/json:
           schema:
             $ref: '../components/schemas/student/model.yaml'
+          examples:
+            changeName:
+              $ref: '../components/examples/student/request/changeName.yaml'
+            changeRoom:
+              $ref: '../components/examples/student/request/changeRoom.yaml'
+            changeBday:
+              $ref: '../components/examples/student/request/changeBday.yaml'
+            changeSex:
+              $ref: '../components/examples/student/request/changeSex.yaml'
     '400':
       $ref: '../components/responses/student/failedToUpdate.yaml'
 patch:
