@@ -1,25 +1,25 @@
 get:
   summary: Get student by id
   parameters:
-    - $ref: '../components/parameters/studentID.yaml'
+    - $ref: '../components/parameters/student/id.yaml'
   responses:
     '200':
       description: Successfully retrieved student with given id
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/student/student.yaml'
+            $ref: '../components/schemas/student/model.yaml'
     '400':
       description: Failed to retrieve student with given id 
       content:
         application/json:
           examples:
             studentNotFound:
-              $ref: '../components/examples/student/studentNotFound.yaml'
+              $ref: '../components/examples/student/notFound.yaml'
 delete:
   summary: Delete student by id
   parameters:
-    - $ref: '../components/parameters/studentID.yaml'
+    - $ref: '../components/parameters/student/id.yaml'
   responses:
     '204':
       description: Successfully deleted student with given id
@@ -29,43 +29,43 @@ delete:
         application/json:
           examples:
             studentNotFound:
-              $ref: '../components/examples/student/studentNotFound.yaml'
+              $ref: '../components/examples/student/notFound.yaml'
 
 put:
   summary: Update student by id
   parameters:
-    - $ref: '../components/parameters/studentID.yaml'
+    - $ref: '../components/parameters/student/id.yaml'
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: '../components/schemas/student/student.yaml'
+          $ref: '../components/schemas/student/model.yaml'
   responses:
     '200':
       description: Successfully updated student with given id
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/student/student.yaml'
+            $ref: '../components/schemas/student/model.yaml'
     '400':
       $ref: '../components/responses/student/failedToUpdate.yaml'
 patch:
   summary: Partially update student by id
   parameters:
-    - $ref: '../components/parameters/studentID.yaml'
+    - $ref: '../components/parameters/student/id.yaml'
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: '../components/schemas/student/studentPatch.yaml'
+          $ref: '../components/schemas/student/patch.yaml'
   responses:
     '200':
       description: Successfully updated student with given id
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/student/student.yaml'
+            $ref: '../components/schemas/student/model.yaml'
     '400':
       $ref: '../components/responses/student/failedToUpdate.yaml'

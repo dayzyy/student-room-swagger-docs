@@ -3,6 +3,6 @@ content:
   application/json:
     examples:
       studentNotFound:
-        $ref: '../../examples/student/studentNotFound.yaml'
+        $ref: '../../examples/student/notFound.yaml'
       studentInvalidDataProvided:
-        $ref: '../../examples/student/studentInvalidDataProvided.yaml'
+        $ref: '../../examples/student/invalidDataProvided.yaml'
