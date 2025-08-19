@@ -22,3 +22,6 @@ paths:
 
   /rooms/add:
     $ref: './paths/room/create.yaml'
+
+  /rooms/{id}/students:
+    $ref: './paths/room/allStudents.yaml'

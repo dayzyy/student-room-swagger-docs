@@ -1,0 +1,20 @@
+get:
+  summary: Get all students in the room with given id
+  parameters:
+    - $ref: '../../components/parameters/room/id.yaml'
+  responses:
+    '200':
+      description: Successfully retrieved all the students from the room with given id
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../../components/schemas/student/model.yaml'
+    '400':
+      description: Failed to retrieve students from the room with given id
+      content:
+        application/json:
+          examples:
+            roomNotFound:
+              $ref: '../../components/examples/room/response/notFound.yaml'
