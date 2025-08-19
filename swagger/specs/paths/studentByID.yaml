@@ -28,6 +28,37 @@ put:
   summary: Update student by id
   parameters:
     - $ref: '../components/parameters/studentID.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/student/student.yaml'
+  responses:
+    '200':
+      description: Successfully updated student with given id
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/student/student.yaml'
+    '400':
+      description: Failed to update student with given id
+      content:
+        application/json:
+          examples:
+            studentNotFound:
+              $ref: '../components/examples/student/studentNotFound.yaml'
+
+patch:
+  summary: Partially update student by id
+  parameters:
+    - $ref: '../components/parameters/studentID.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/student/studentPatch.yaml'
   responses:
     '200':
       description: Successfully updated student with given id

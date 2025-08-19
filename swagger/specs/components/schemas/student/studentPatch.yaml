@@ -17,6 +17,3 @@ properties:
     type: string
     enum: ["M", "F"]
     example: "F"
-  room_id:
-    type: integer
-    example: 111
