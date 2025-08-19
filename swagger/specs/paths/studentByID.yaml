@@ -48,7 +48,8 @@ put:
           examples:
             studentNotFound:
               $ref: '../components/examples/student/studentNotFound.yaml'
-
+            studentInvalidDataProvided:
+              $ref: '../components/examples/student/studentInvalidDataProvided.yaml'
 patch:
   summary: Partially update student by id
   parameters:
@@ -73,3 +74,5 @@ patch:
           examples:
             studentNotFound:
               $ref: '../components/examples/student/studentNotFound.yaml'
+            studentInvalidDataProvided:
+              $ref: '../components/examples/student/studentInvalidDataProvided.yaml'
